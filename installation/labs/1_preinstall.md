@@ -22,3 +22,15 @@
 <br><code>yum install nscd</code></br>
 <br>Start nscd</br>
 <br><code>chkconfig nscd on</code></br>
+<br>Install MariaDB</br>
+<br><code>sudo yum install mariadb-server</code></br>
+<br>Stop the MariaDB server if it is running</br>
+<br><code> sudo service mariadb stop</code></br>
+<br>Edit my.cnf</br>
+<br><code> vi /etc/my.cnf</code></br>
+<br>Set transaction isolation level to read committed</br>
+<br><code>transaction-isolation = READ-COMMITTED</code></br>
+
+<br></br>
+<br><code></code></br>
+
