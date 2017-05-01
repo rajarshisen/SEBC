@@ -1,2 +1,2 @@
-<code>sudo sysctl vm.swappiness=1</code>
-<code>cat /proc/sys/vm/swappiness</code>
+<br>sudo sysctl vm.swappiness=1</br>
+<br>cat /proc/sys/vm/swappiness</br>
