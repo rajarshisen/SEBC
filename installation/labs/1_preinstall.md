@@ -10,3 +10,15 @@
 <br><code>echo never > /sys/kernel/mm/transparent_hugepage/enabled </code></br>
 <br>Verify transparent hugepage support</br>
 <br><code>cat /sys/kernel/mm/transparent_hugepage/enabled</code></br>
+<br>List your network interface configuration</br>
+<br><code>ip link show</code></br>
+<br>Install NTP</br>
+<br><code>yum install ntp ntpdate ntp-doc</code></br>
+<br>Start NTP</br>
+<br><code>chkconfig ntpd on</code></br>
+<br>Synchronize the system clock with 0.pool.ntp.org server</br>
+<br><code>ntpdate pool.ntp.org</code></br>
+<br>Install NSCD</br>
+<br><code>yum install nscd</code></br>
+<br>Start nscd</br>
+<br><code>chkconfig nscd on</code></br>
