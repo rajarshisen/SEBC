@@ -75,7 +75,7 @@ All done!
 <br><code>mkdir java</code></br>
 <br>Give permission to java directory</br>
 <br><code>chmod -R 777 java</code></br>
-<br>Install jdbc driver</br>
+<br>Install jdbc driver IN ALL NODES</br>
 <br><code>yum install mysql-connector-java</code></br>
 <br>Log into MariaDB as the root user</br>
 <br><code>mysql -u root -p</code></br>
@@ -86,7 +86,7 @@ All done!
 <br><code>create database rman DEFAULT CHARACTER SET utf8;</code></br>
 <br><code>grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'rman_password';</code></br>
 <br><code>create database metastore DEFAULT CHARACTER SET utf8;</code></br>
-<br><code>grant all on hive.* TO 'amon'@'%' IDENTIFIED BY 'hive_password';</code></br>
+<br><code>grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY 'hive_password';</code></br>
 <br><code>create database sentry DEFAULT CHARACTER SET utf8;</code></br>
 <br><code>grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry_password';</code></br>
 <br><code>create database nav DEFAULT CHARACTER SET utf8;</code></br>
@@ -122,6 +122,83 @@ All done!
 <br><code>sudo yum install oracle-j2sdk1.7</code></br>
 <br>Install the Cloudera Manager Server Packages</br>
 <br><code>sudo yum install cloudera-manager-agent cloudera-manager-daemons</code></br>
+<br>Show prepare database command location</br>
+<br><code>sudo find / -name "scm_prepare_database*" -print</code></br>
+<br>Prepare databases</br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql rman rman rman_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql metastore hive hive_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql sentry sentry sentry_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql nav nav nav_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql navms navms navms_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql amon amon amon_password</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql oozie oozie oozie</code></br>
+<br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql hue hue huepassword</code></br>
+<br>Start Cloudera Manager server agent</br>
+<br><code>sudo service cloudera-scm-server start</code></br>
+<br>Check the server log for errors</br>
+<br><code>vi /var/log/cloudera-scm-server/cloudera-scm-server.log</code></br>
+<br>Open Cloudera manager</br>
+<br><code>http://54.206.45.12:7180</code></br>
+<br>Disable SELINUX</br>
+<br><code>vi /etc/sysconfig/selinux</code></br>
+<br></br>
+<br><code> vi /etc/cloudera-scm-agent/config.ini</code></br>
+<br></br>
+<br><code>vi /var/log/cloudera-scm-agent/cloudera-scm-agent.log</code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
+<br></br>
+<br><code></code></br>
 <br></br>
 <br><code></code></br>
 <br></br>
