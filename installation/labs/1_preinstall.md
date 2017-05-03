@@ -111,7 +111,7 @@ All done!
 <br><code> sudo cp /usr/share/java/mysql-connector-java-5.1.42-bin.jar /var/lib/oozie/mysql-connector-java-5.1.42-bin.jar</code></br>
 <br>Python veriosn check, must be 2.6 or higher</br>
 <br><code>python --version</code></br>
-<br><Install pip for python/br>
+<br>Install pip for python</br>
 <br><code>sudo easy_install pip</code></br>
 <br>Install Python-PostgreSQL Database Adapter psycopg2</br>
 <br><code>pip install psycopg2</code></br>
@@ -141,73 +141,8 @@ All done!
 <br><code>http://54.206.45.12:7180</code></br>
 <br>Disable SELINUX</br>
 <br><code>vi /etc/sysconfig/selinux</code></br>
-<br></br>
+<br>Edit config.ini with the ip address of the server at the top</br>
 <br><code> vi /etc/cloudera-scm-agent/config.ini</code></br>
-<br></br>
 <br><code>vi /var/log/cloudera-scm-agent/cloudera-scm-agent.log</code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
-<br></br>
-<br><code></code></br>
+<br>Restart the cloudera scm server if the node shows red</br>
+<br><code>service cloudera-scm-agent restart</code></br>
