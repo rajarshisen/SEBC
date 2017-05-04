@@ -72,7 +72,6 @@ Remove test database and access to it [Y/n] Y
 Reload privilege tables now? [Y/n] Y
 All done!
 </code></br>
-<br>Download the MySQL JDBC driver mysql-connector-java-5.1.31-bin.jar from http://www.mysql.com/downloads/connector/j/5.1.html</br>
 <br>Create directory java</br>
 <br><code>cd /usr/share</code></br>
 <br><code>mkdir java</code></br>
@@ -119,7 +118,6 @@ All done!
 <br>Install Python-PostgreSQL Database Adapter psycopg2</br>
 <br><code>pip install psycopg2</code></br>
 <br>Save the appropriate Cloudera Manager repo file (cloudera-manager.repo) from location https://archive.cloudera.com/cm5/redhat/5/x86_64/cm/cloudera-manager.repo</br>
-<br>Update the base url with correct version of Cloudera manager</br>
 <br><code>sudo mkdir -p/etc/yum.repos.d</code></br>
 <br><code>sudo cp /tmp/cloudera-manager.repo /etc/yum.repos.d/cloudera-manager.repo</code></br>
 <br>Install the JDK from a repository</br>
@@ -127,6 +125,8 @@ All done!
 <br>Install the Cloudera Manager Server Packages</br>
 <br><code>sudo yum install cloudera-manager-agent cloudera-manager-daemons</code></br>
 <br>Show prepare database command location</br>
+tar zxvf mysql-connector-java-5.1.42.tar.gz
+sudo cp /tmp/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar /usr/share/cmf/lib/mysql-connector-java.jar
 <br><code>sudo find / -name "scm_prepare_database*" -print</code></br>
 <br>Prepare databases</br>
 <br><code>/usr/share/cmf/schema/scm_prepare_database.sh mysql rman rman rman_password</code></br>
