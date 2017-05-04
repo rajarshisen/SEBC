@@ -24,6 +24,8 @@
 <br><code>chkconfig nscd on</code></br>
 <br>Install MariaDB</br>
 <br><code>sudo yum install mariadb-server</code></br>
+<br>sudo yum install  mariadb-server-5.5 mariadb-client-5.5 --for particular version</br>
+<br> mysqladmin -u root -p version -- check database version</br>
 <br>Stop the MariaDB server if it is running</br>
 <br><code> sudo service mariadb stop</code></br>
 <br>Edit my.cnf</br>
@@ -115,7 +117,8 @@ All done!
 <br><code>sudo easy_install pip</code></br>
 <br>Install Python-PostgreSQL Database Adapter psycopg2</br>
 <br><code>pip install psycopg2</code></br>
-<br>Save the appropriate Cloudera Manager repo file (cloudera-manager.repo)</br>
+<br>Save the appropriate Cloudera Manager repo file (cloudera-manager.repo) from location https://archive.cloudera.com/cm5/redhat/5/x86_64/cm/cloudera-manager.repo</br>
+<br>Update the base url with correct version of Cloudera manager</br>
 <br><code>sudo mkdir -p/etc/yum.repos.d</code></br>
 <br><code>sudo cp /tmp/cloudera-manager.repo /etc/yum.repos.d/cloudera-manager.repo</code></br>
 <br>Install the JDK from a repository</br>
