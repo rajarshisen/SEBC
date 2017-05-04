@@ -72,6 +72,7 @@ Remove test database and access to it [Y/n] Y
 Reload privilege tables now? [Y/n] Y
 All done!
 </code></br>
+<br>Download the MySQL JDBC driver mysql-connector-java-5.1.31-bin.jar from http://www.mysql.com/downloads/connector/j/5.1.html</br>
 <br>Create directory java</br>
 <br><code>cd /usr/share</code></br>
 <br><code>mkdir java</code></br>
