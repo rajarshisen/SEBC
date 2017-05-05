@@ -123,7 +123,9 @@ All done!
 <br>Install the JDK from a repository</br>
 <br><code>sudo yum install oracle-j2sdk1.7</code></br>
 <br>Install the Cloudera Manager Server Packages</br>
-<br><code>sudo yum install cloudera-manager-agent cloudera-manager-daemons</code></br>
+<br><code>sudo yum install cloudera-manager-agent cloudera-manager-daemons
+sudo yum install cloudera-manager-server
+</code></br>
 <br>Show prepare database command location</br>
 tar zxvf mysql-connector-java-5.1.42.tar.gz
 sudo cp /tmp/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar /usr/share/cmf/lib/mysql-connector-java.jar
