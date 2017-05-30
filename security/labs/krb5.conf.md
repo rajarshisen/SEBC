@@ -24,7 +24,9 @@ includedir /etc/krb5.conf.d/
   kdc = ip-172-31-0-214.ap-southeast-2.compute.internal
   admin_server = ip-172-31-0-214.ap-southeast-2.compute.internal
  }
-
+```
+The `domain-realm` properties were not set and could not have resolved client calls in your DNS domain to your Kerberos realm.
+```
 [domain_realm]
  .example.com = HADOOP.COM
  example.com = HADOOP.COM
