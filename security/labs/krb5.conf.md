@@ -1,3 +1,4 @@
+```
 # Configuration snippets may be placed in this directory as well
 includedir /etc/krb5.conf.d/
 
@@ -27,3 +28,4 @@ includedir /etc/krb5.conf.d/
 [domain_realm]
  .example.com = HADOOP.COM
  example.com = HADOOP.COM
+```
