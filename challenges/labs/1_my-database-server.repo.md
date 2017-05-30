@@ -1,18 +1,18 @@
 <br>Install MariaDB 5.5 server, as appropriate, on the first node listed - Node 1 54.206.11.198 ec2-54-206-11-198.ap-southeast-2.compute.amazonaws.com</br>
 <br><code>sudo yum install mariadb-server</code></br>
 <br>Install the appropriate JDBC connector jar on all cluster nodes</br>
-<br><code>
+```
 cd /tmp
 tar zxvf mysql-connector-java-5.1.42.tar.gz
 mkdir -p /usr/share/cmf/lib/
 sudo cp /tmp/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar /usr/share/cmf/lib/mysql-connector-java.jar
-</code></br>
+```
 <br>Stop MariaDB servie if running</br>
 <br><code>sudo service mariadb stop</code></br>
 <br>Edit my.cnf</br>
 <br><code> vi /etc/my.cnf</code></br>
 <br>Add the following</br>
-<br><code>
+```
 transaction-isolation = READ-COMMITTED
 # Disabling symbolic-links is recommended to prevent assorted security risks;
 # to do so, uncomment this line:
@@ -54,7 +54,7 @@ innodb_log_file_size = 512M
 [mysqld_safe]
 log-error=/var/log/mariadb/mariadb.log
 pid-file=/var/run/mariadb/mariadb.pid
-</code></br>
+```
 <br>Ensure the MariaDB server starts at boot</br>
 <br><code>sudo systemctl enable mariadb</code></br>
 <br>Start the MariaDB database service</br>
@@ -64,7 +64,7 @@ pid-file=/var/run/mariadb/mariadb.pid
 <br><code>sudo /usr/bin/mysql_secure_installation</code></br>
 <br>password = 12345</br>
 <br>Change MariaDB password</br>
-<br><code>
+```
 [...]
 Enter current password for root (enter for none):
 OK, successfully used password, moving on...
@@ -82,7 +82,7 @@ Reload privilege tables now? [Y/n] Y
 All done!
 </code></br>
 <br>Create the following databases - scm,rman,hive,oozie,hue,sentry</br>
-<br><code>
+```
 mysql -u root -p
 
 create database scm DEFAULT CHARACTER SET utf8;
